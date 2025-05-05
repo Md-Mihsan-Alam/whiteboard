@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+hmtl,body{
+  scrollbar-width: thin;
+  background-color: black;
+  columns: #f9f9f9;
+}
+body{
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
+  overflow: hidden;
+  overflow: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.size-40{
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+}
+.app{
+  position: relative;
+  height: 100vh;
+}
+.app #whiteboard{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
