@@ -1,22 +1,28 @@
 {
   "version": 2,
-  "root": "WhiteBoard_zego",
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "projectSettings": {
+    "installCommand": "cd WhiteBoard_zego && npm install",
+    "buildCommand": "cd WhiteBoard_zego && npm run build",
+    "outputDirectory": "WhiteBoard_zego/dist",
+    "rootDirectory": "WhiteBoard_zego"
+  },
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "WhiteBoard_zego/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "nodeVersion": "18.x"
+      }
     }
   ],
   "routes": [
     {
       "src": "/socket.io/(.*)",
-      "dest": "/server.js"
+      "dest": "WhiteBoard_zego/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "WhiteBoard_zego/server.js"
     }
   ],
   "env": {
