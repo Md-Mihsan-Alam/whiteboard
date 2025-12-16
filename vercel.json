@@ -1,18 +1,4 @@
 {
   "version": 2,
-  "apps": [
-    {
-      "name": "whiteboard",
-      "crons": [],
-      "root": "WhiteBoard_zego",
-      "buildCommand": "npm run build",
-      "installCommand": "npm install",
-      "envPrefix": "",
-      "functions": {
-        "server.js": {
-          "runtime": "nodejs18.x"
-        }
-      }
-    }
-  ]
+  "root": "WhiteBoard_zego"
 }
