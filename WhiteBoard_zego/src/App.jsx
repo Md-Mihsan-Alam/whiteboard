@@ -23,7 +23,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const newSocket = io();
+    const socketUrl = process.env.NODE_ENV === 'production' 
+      ? window.location.origin 
+      : 'http://localhost:3001';
+    const newSocket = io(socketUrl);
     setSocket(newSocket);
 
     newSocket.on('drawing', (data) => {
