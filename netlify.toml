@@ -1,7 +1,7 @@
 [build]
   base = "WhiteBoard_zego"
   command = "npm run build"
-  publish = "WhiteBoard_zego/dist"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
