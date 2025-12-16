@@ -10,7 +10,7 @@ import { CiEraser } from "react-icons/ci";
 import { GiLaserBurst } from "react-icons/gi";
 import { HiCursorClick } from "react-icons/hi";
 
-const ToolBox = ({ currentTool, onclick }) => {
+const ToolBox = ({ currentTool, onclick, isMobile, showMobileTools }) => {
 
     const tools = [
         {
@@ -54,13 +54,13 @@ const ToolBox = ({ currentTool, onclick }) => {
             type: 128
         },
         {
-            name: "Click",
+            name: "Pan",
             icon: HiCursorClick,
             type: 256
         },
     ]
     return (
-        <div id='toolbox'>
+        <div id='toolbox' className={isMobile ? (showMobileTools ? 'mobile-show' : 'mobile-hide') : ''}>
             <ul className='tools-container'>
                 {tools.map((tool, index) => {
                     return (

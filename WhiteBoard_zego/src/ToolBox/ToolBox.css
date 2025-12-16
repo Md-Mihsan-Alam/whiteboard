@@ -1,11 +1,12 @@
 #toolbox {
-    background-color: #222;
-    padding: 10px 20px;
+    background-color: rgba(34, 34, 34, 0.95);
+    padding: 15px;
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    height: 100%;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 #toolbox .tools-container,
 #toolbox .tools-container .tool {
@@ -24,8 +25,14 @@
     cursor: pointer;
     border-radius: 10px;
     font-size: 20px;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+#toolbox .tools-container .tool:hover{
+    background-color: #404040;
 }
 #toolbox .tools-container .tool.active{
     background-color: #5100ff;
     color: #fff;
+    box-shadow: 0 0 10px rgba(81, 0, 255, 0.5);
 }
